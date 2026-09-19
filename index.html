@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Enecom IT Solutions GH — Technology, AI, Software and Digital Skills. Practical technology solutions for individuals, businesses, schools, churches and organizations in Ghana.">
+<meta name="keywords" content="Enecom IT Solutions Ghana, IT solutions Ghana, AI Ghana, software development Ghana, IT training Mankessim, web development Ghana">
+<title>Enecom IT Solutions GH | Technology • AI • Software • Digital Skills</title>
+<style>
+:root{
+  --blue:#0756A8; --navy:#0B1F3A; --cyan:#00B8D9; --gold:#F4B400;
+  --white:#fff; --light:#f5f8fc; --text:#172033; --muted:#64748b;
+  --border:#dfe7f1; --shadow:0 14px 40px rgba(11,31,58,.10);
+  --radius:18px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(92%,var(--max));margin:auto}
+.topbar{background:var(--navy);color:#dbeafe;font-size:.9rem;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.5px}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-weight:900;font-size:1.25rem;box-shadow:0 8px 20px rgba(7,86,168,.25)}
+.logo-text span{display:block;color:var(--blue);font-size:1.15rem;line-height:1}
+.logo-text small{display:block;color:var(--navy);font-size:.57rem;letter-spacing:1.2px;margin-top:3px}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:.93rem;font-weight:700;color:#334155}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 19px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#06498f;transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--blue);color:var(--blue);background:#fff}
+.btn-outline:hover{background:#eef6ff}
+.menu{display:none;background:none;border:0;font-size:1.6rem}
+.hero{background:
+radial-gradient(circle at 80% 15%,rgba(0,184,217,.22),transparent 28%),
+linear-gradient(135deg,#061a33 0%,#0b2d52 52%,#0756a8 100%);
+color:white;padding:95px 0 85px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);padding:8px 13px;border-radius:999px;font-size:.82rem;font-weight:800;margin-bottom:20px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.02;letter-spacing:-2.5px;max-width:760px}
+.hero h1 span{color:#72e5f6}
+.hero p{font-size:1.12rem;color:#dbeafe;max-width:650px;margin:24px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn-primary{background:#fff;color:var(--blue)}
+.hero .btn-outline{border-color:rgba(255,255,255,.45);background:transparent;color:#fff}
+.hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);padding:25px;border-radius:24px;box-shadow:0 25px 70px rgba(0,0,0,.18)}
+.network{height:330px;border-radius:18px;background:
+linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+background-size:35px 35px;position:relative;overflow:hidden}
+.node{position:absolute;width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 10px 30px rgba(0,184,217,.25)}
+.n1{left:11%;top:15%}.n2{right:12%;top:25%}.n3{left:25%;bottom:15%}.n4{right:24%;bottom:12%}.n5{left:45%;top:43%;width:72px;height:72px;border-radius:24px;background:#fff;color:var(--blue);font-size:1.25rem}
+.line{position:absolute;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(255,255,255,.25));transform-origin:left center}
+.l1{left:17%;top:24%;width:48%;transform:rotate(8deg)}.l2{left:52%;top:50%;width:34%;transform:rotate(-28deg)}.l3{left:30%;top:57%;width:28%;transform:rotate(-70deg)}.l4{left:53%;top:57%;width:24%;transform:rotate(55deg)}
+section{padding:85px 0}
+.section-head{max-width:720px;margin-bottom:40px}
+.eyebrow{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1.7px;font-size:.78rem;margin-bottom:8px}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
+.section-head p{color:var(--muted);margin-top:13px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:26px;background:#fff;box-shadow:0 8px 25px rgba(11,31,58,.045);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:52px;height:52px;border-radius:15px;background:#eaf5ff;color:var(--blue);display:grid;place-items:center;font-size:1.35rem;margin-bottom:18px}
+.card h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:.94rem}
+.card a.more{display:inline-block;margin-top:16px;color:var(--blue);font-weight:800;font-size:.9rem}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.about-visual{min-height:420px;border-radius:28px;background:linear-gradient(145deg,var(--navy),var(--blue));padding:35px;position:relative;overflow:hidden;color:#fff}
+.about-visual:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(0,184,217,.2);right:-80px;top:-70px}
+.about-visual h3{font-size:2rem;max-width:400px;position:relative}
+.stat-box{position:absolute;bottom:30px;left:30px;right:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:15px;padding:16px}
+.stat strong{display:block;font-size:1.55rem}.stat span{font-size:.75rem;color:#dbeafe}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:25px 0}
+.check{display:flex;gap:9px;font-weight:700;font-size:.92rem}.check b{color:var(--cyan)}
+.products{background:var(--navy);color:#fff}
+.products .section-head h2{color:#fff}.products .section-head p{color:#cbd5e1}
+.product-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:25px}
+.product-card h3{margin-bottom:8px}.product-card p{color:#cbd5e1;font-size:.9rem}
+.product-card .tag{display:inline-block;margin-bottom:17px;color:#72e5f6;font-weight:900;font-size:.75rem;text-transform:uppercase}
+.training{background:linear-gradient(135deg,#f5fbff,#fff)}
+.cta{padding:70px 0;background:linear-gradient(135deg,var(--blue),#064281);color:#fff}
+.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1}.cta p{color:#dbeafe;margin-top:10px;max-width:650px}
+.contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+.contact-list{display:grid;gap:15px;margin-top:22px}
+.contact-item{display:flex;gap:13px;align-items:flex-start}.contact-item .icon{flex:none;width:42px;height:42px;margin:0;font-size:1rem}
+.form{background:#fff;border:1px solid var(--border);padding:28px;border-radius:20px;box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:6px;margin-bottom:15px}.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:800;color:var(--navy)}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:10px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(7,86,168,.08)}
+textarea{min-height:125px;resize:vertical}
+footer{background:#06172b;color:#cbd5e1;padding:55px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:35px}
+footer h3{color:#fff;margin-bottom:15px;font-size:1rem}footer p,footer a{font-size:.88rem;color:#9fb0c4}footer a{display:block;margin:7px 0}footer a:hover{color:#72e5f6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.8rem}
+.float-wa{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.2);z-index:1001}
+.notice{background:#fff7e0;border-left:4px solid var(--gold);padding:14px 16px;border-radius:10px;color:#614900;font-size:.88rem;margin-top:20px}
+@media(max-width:900px){
+ .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:18px 5%;border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start}
+ .nav-links.show{display:flex}.menu{display:block}.nav>.btn{display:none}
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:70px}
+ .grid-4{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ section{padding:65px 0}.grid-3,.grid-4{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .hero h1{letter-spacing:-1.5px}.stat-box{grid-template-columns:1fr}.about-visual{min-height:500px}
+ .cta-box{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr}.topbar .container{font-size:.78rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Mankessim, Central Region, Ghana</span>
+    <span>📞 +233 245 867 221 &nbsp; | &nbsp; ✉️ dadzieebenezermensah@gmail.com</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home" aria-label="Enecom IT Solutions GH home">
+      <div class="logo-mark">E</div>
+      <div class="logo-text"><span>ENECOM</span><small>IT SOLUTIONS GH</small></div>
+    </a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#products">Products</a><a href="#academy">Academy</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get Started</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">● TECHNOLOGY • AI • SOFTWARE • DIGITAL SKILLS</div>
+      <h1>Empowering People. <span>Digitizing Businesses.</span> Transforming Communities.</h1>
+      <p>Enecom IT Solutions GH helps individuals, businesses, schools, churches and organizations solve practical problems through software, artificial intelligence, IT support, data and professional technology training.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Get a Technology Solution →</a>
+        <a class="btn btn-outline" href="#academy">Explore Training</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="network">
+        <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div><div class="line l4"></div>
+        <div class="node n1">AI</div><div class="node n2">IT</div><div class="node n3">DB</div><div class="node n4">WEB</div><div class="node n5">E</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Practical technology for real-world needs.</h2>
+      <p>From a first website to a complete management system, Enecom combines technology expertise with practical training and support.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card"><div class="icon">💻</div><h3>Software & Web Development</h3><p>Custom websites, web applications, databases and management systems designed around your organization.</p><a class="more" href="#contact">Build a solution →</a></article>
+      <article class="card"><div class="icon">🤖</div><h3>AI & Automation</h3><p>AI training, workflow automation, AI assistants and practical generative-AI solutions for people and organizations.</p><a class="more" href="#contact">Explore AI →</a></article>
+      <article class="card"><div class="icon">🛠️</div><h3>IT Support</h3><p>Computer troubleshooting, networking, installation, maintenance, backup guidance and technical support.</p><a class="more" href="#contact">Get support →</a></article>
+      <article class="card"><div class="icon">📊</div><h3>Data & Analytics</h3><p>Excel, SQL, Python, dashboards, data cleaning, visualization and reporting for better decisions.</p><a class="more" href="#contact">Analyze your data →</a></article>
+      <article class="card"><div class="icon">🎓</div><h3>Digital Training</h3><p>Practical ICT, programming, AI, data, creative technology and professional digital-skills training.</p><a class="more" href="#academy">View training →</a></article>
+      <article class="card"><div class="icon">🎨</div><h3>Digital Creative</h3><p>Graphic design, video editing, presentations, social content and AI-assisted creative production.</p><a class="more" href="#contact">Start a project →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="eyebrow" style="color:#72e5f6">ABOUT ENECOM</div>
+      <h3>Technology should solve problems, create opportunities and empower people.</h3>
+      <div class="stat-box">
+        <div class="stat"><strong>IT</strong><span>Solutions</span></div>
+        <div class="stat"><strong>AI</strong><span>Innovation</span></div>
+        <div class="stat"><strong>24/7</strong><span>Digital possibility</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Your Technology & AI Partner</div>
+      <h2>More than technology. We build capability.</h2>
+      <p style="margin-top:16px;color:var(--muted)">Enecom IT Solutions GH is a Ghanaian technology and digital-solutions brand focused on helping people and organizations use technology effectively. We combine software development, artificial intelligence, IT support, data and professional training.</p>
+      <div class="checks">
+        <div class="check"><b>✓</b> Practical solutions</div>
+        <div class="check"><b>✓</b> Professional service</div>
+        <div class="check"><b>✓</b> Customer-focused</div>
+        <div class="check"><b>✓</b> Continuous learning</div>
+        <div class="check"><b>✓</b> Accessible technology</div>
+        <div class="check"><b>✓</b> Long-term support</div>
+      </div>
+      <a class="btn btn-primary" href="#contact">Talk to Enecom</a>
+      <div class="notice"><strong>Our mission:</strong> To provide affordable, innovative and practical technology solutions and digital skills that empower individuals, businesses and organizations to work smarter and participate effectively in the digital economy.</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="color:#72e5f6">Software Products</div>
+      <h2>Solutions designed for organizations.</h2>
+      <p>Our product direction focuses on reusable platforms that solve common administrative and operational challenges.</p>
+    </div>
+    <div class="grid-3">
+      <article class="product-card"><span class="tag">Education</span><h3>Enecom SchoolPro</h3><p>Student information, academics, attendance, fees, reporting and school administration in one platform.</p></article>
+      <article class="product-card"><span class="tag">Church</span><h3>Enecom ChurchPro</h3><p>Membership, attendance, departments, events, communication, finance and church administration.</p></article>
+      <article class="product-card"><span class="tag">Administration</span><h3>Enecom Secretariat</h3><p>Quarterly statistical reporting, district performance analysis and administrative monitoring.</p></article>
+      <article class="product-card"><span class="tag">SME</span><h3>Enecom BusinessPro</h3><p>Business records, customers, sales, inventory, reports and operational dashboards for growing businesses.</p></article>
+      <article class="product-card"><span class="tag">Inventory</span><h3>Enecom InventoryPro</h3><p>Track stock, products, sales, purchases, balances and management reports.</p></article>
+      <article class="product-card"><span class="tag">Artificial Intelligence</span><h3>Enecom AI Assistant</h3><p>AI-powered knowledge, support and productivity solutions tailored to organizational needs.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="academy" class="training">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Enecom Academy</div>
+      <h2>Learn technology. Build your future.</h2>
+      <p>Practical technology education for students, professionals, entrepreneurs, teachers and creatives.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card"><div class="icon">🤖</div><h3>Artificial Intelligence</h3><p>AI fundamentals, prompting, productivity, research, creative AI and automation.</p></div>
+      <div class="card"><div class="icon">🌐</div><h3>Web Development</h3><p>HTML, CSS, JavaScript, PHP, databases and practical web projects.</p></div>
+      <div class="card"><div class="icon">🐍</div><h3>Python & Data</h3><p>Python, SQL, Excel, data analysis, visualization and reporting.</p></div>
+      <div class="card"><div class="icon">🎨</div><h3>Creative Technology</h3><p>Graphic design, video editing, presentations, social media and AI-assisted creation.</p></div>
+    </div>
+    <div style="margin-top:30px"><a class="btn btn-primary" href="#contact">Register / Request Training</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Who We Serve</div>
+      <h2>Technology for people and organizations at every stage.</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card"><h3>🏢 Businesses</h3><p>Websites, software, automation, IT support and digital transformation.</p></div>
+      <div class="card"><h3>🏫 Schools</h3><p>School systems, websites, ICT support, data and teacher training.</p></div>
+      <div class="card"><h3>⛪ Churches</h3><p>Administration, reporting, membership systems and digital media support.</p></div>
+      <div class="card"><h3>👨‍🎓 Students</h3><p>ICT, programming, AI, data and professional digital skills.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-box">
+    <div><h2>Have a technology problem?</h2><p>Tell us what you are trying to achieve. We can help you identify a practical digital solution.</p></div>
+    <a class="btn btn-primary" href="#contact" style="background:#fff;color:var(--blue)">Start a Conversation →</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact Enecom</div>
+      <h2>Let's build something useful.</h2>
+      <p style="margin-top:14px;color:var(--muted)">For software projects, IT support, AI training, websites, data services or professional training, send us your requirements.</p>
+      <div class="contact-list">
+        <div class="contact-item"><div class="icon">📍</div><div><strong>Location</strong><br><span style="color:var(--muted)">Mankessim, Central Region, Ghana</span></div></div>
+        <div class="contact-item"><div class="icon">📞</div><div><strong>Phone</strong><br><span style="color:var(--muted)">+233 245 867 221<br>+233 500 111 663</span></div></div>
+        <div class="contact-item"><div class="icon">✉️</div><div><strong>Email</strong><br><span style="color:var(--muted)">dadzieebenezermensah@gmail.com</span></div></div>
+      </div>
+    </div>
+    <form class="form" id="contactForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Full name</label><input id="name" required placeholder="Your name"></div>
+        <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" required placeholder="+233..."></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"></div>
+        <div class="field"><label for="service">Service</label><select id="service"><option>Software Development</option><option>Website Development</option><option>AI Training / Solution</option><option>IT Support</option><option>Data Analytics</option><option>Digital Skills Training</option><option>Creative Services</option><option>Other</option></select></div>
+        <div class="field full"><label for="message">Tell us what you need</label><textarea id="message" required placeholder="Describe your project or problem..."></textarea></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Send Enquiry via WhatsApp →</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo"><div class="logo-mark">E</div><div class="logo-text"><span style="color:#fff">ENECOM</span><small style="color:#9fb0c4">IT SOLUTIONS GH</small></div></div>
+      <p style="margin-top:16px;max-width:320px">Technology • AI • Software • Digital Skills</p>
+      <p style="margin-top:8px">Empowering People. Digitizing Businesses. Transforming Communities.</p>
+    </div>
+    <div><h3>Company</h3><a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a></div>
+    <div><h3>Solutions</h3><a href="#services">Software</a><a href="#services">AI & Automation</a><a href="#services">IT Support</a><a href="#academy">Training</a></div>
+    <div><h3>Connect</h3><a href="#contact">WhatsApp</a><a href="#contact">Email</a><a href="#contact">Request a Quote</a><a href="#academy">Training</a></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Enecom IT Solutions GH. All rights reserved.</span>
+    <span>Learn • Build • Innovate • Transform</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/233245867221" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WA</a>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('show'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('show')));
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value.trim();
+  const text=`Hello Enecom IT Solutions GH,%0A%0AMy name is ${encodeURIComponent(name)}.%0APhone/WhatsApp: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AService: ${encodeURIComponent(service)}%0A%0ARequirement:%0A${encodeURIComponent(message)}`;
+  window.open(`https://wa.me/233245867221?text=${text}`,'_blank');
+});
+</script>
+</body>
+</html>
